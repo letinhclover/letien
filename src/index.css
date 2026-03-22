@@ -1,0 +1,186 @@
+/* ═══════════════════════════════════════════════════
+   GIA PHẢ DÒNG HỌ LÊ — index.css
+   Phong cách: Neo-Traditional
+   Font: Roboto
+   v17 — Redesign hoàn toàn
+════════════════════════════════════════════════════ */
+
+/* Font Roboto được load trong index.html */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── 2. DESIGN TOKENS ── */
+:root {
+  /* Màu chủ đạo */
+  --color-primary:     #CC0000;   /* Đỏ tươi */
+  --color-primary-dk:  #990000;
+  --color-gold:        #7A5A00;   /* Vàng antique */
+  --color-gold-lt:     #A07800;
+
+  /* Nền */
+  --color-bg:          #f8fafc;   /* Trắng xanh nhạt như HTML mẫu */
+  --color-bg-card:     #ffffff;
+  --color-bg-dark:     #111214;
+  --color-bg-card-dk:  #1d1f21;
+
+  /* Chữ */
+  --color-text:        #0b0b0b;
+  --color-text-sub:    #3d3d3d;
+  --color-text-dk:     #f5f5f5;
+  --color-text-sub-dk: #c0c0c0;
+
+  /* Border */
+  --color-border:      #e2e8f0;
+  --color-border-dk:   #2d3748;
+
+  /* Font — Roboto duy nhất */
+  --font-serif:  'Roboto', system-ui, sans-serif;
+  --font-sans:   'Roboto', system-ui, sans-serif;
+
+  /* Shadow */
+  --shadow-sm:  0 2px 6px rgba(0,0,0,0.08);
+  --shadow-md:  0 4px 16px rgba(0,0,0,0.10);
+  --shadow-lg:  0 8px 28px rgba(0,0,0,0.13);
+}
+
+/* ── 3. BASE RESET ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+  background: var(--color-bg);
+  font-family: 'Roboto', system-ui, sans-serif;
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── 4. TYPOGRAPHY HIERARCHY ── */
+h1, h2, h3, h4, h5, h6, p, span, div, button, input, select, textarea,
+.font-serif, .app-title, .clan-title {
+  font-family: 'Roboto', system-ui, sans-serif;
+}
+
+.bg-paper {
+  background-color: #f8fafc;
+}
+
+/* ── 6. GLASSMORPHISM UTILITY ── */
+.glass {
+  background: rgba(255, 253, 247, 0.72);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 253, 247, 0.4);
+}
+
+.glass-dark {
+  background: rgba(17, 18, 20, 0.82);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── 7. BOTTOM NAV GLASS ── */
+.bottom-nav-glass {
+  background: rgba(255, 253, 247, 0.85);
+  backdrop-filter: blur(20px) saturate(200%);
+  -webkit-backdrop-filter: blur(20px) saturate(200%);
+  border-top: 1px solid rgba(226, 216, 202, 0.6);
+  box-shadow: 0 -4px 24px rgba(28, 20, 16, 0.07);
+}
+
+.bottom-nav-glass-dark {
+  background: rgba(17, 18, 20, 0.92);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-top: 1px solid rgba(45, 61, 82, 0.8);
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* ── 8. FAMILY NODE — Card nổi ── */
+.family-node-card {
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.family-node-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* ── 9. SCROLLABLE AREAS ── */
+.overflow-y-auto {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* ── 10. SAFE AREA ── */
+.safe-top    { padding-top: env(safe-area-inset-top, 0px); }
+.safe-bottom { padding-bottom: env(safe-area-inset-bottom, 0px); }
+
+/* ── 11. REACT FLOW OVERRIDES ── */
+.react-flow__renderer { touch-action: auto !important; }
+.react-flow__node     { cursor: pointer; }
+
+/* Controls ReactFlow — bo tròn đẹp */
+.react-flow__controls {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: var(--shadow-md) !important;
+}
+.react-flow__controls-button {
+  border: none !important;
+  background: var(--color-bg-card) !important;
+  color: var(--color-text) !important;
+  transition: background 0.15s !important;
+}
+.react-flow__controls-button:hover {
+  background: var(--color-bg) !important;
+}
+
+/* ── 12. SCROLLBAR HIDDEN ── */
+::-webkit-scrollbar { display: none; }
+* { scrollbar-width: none; }
+
+/* ── 13. BUTTON TAP FEEL ── */
+button, [role="button"] {
+  touch-action: manipulation;
+  user-select: none;
+}
+
+/* ── 14. CARD BASE ── */
+.card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.card-dark {
+  background: var(--color-bg-card-dk);
+  border: 1px solid var(--color-border-dk);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+/* ── 15. ACCENT HIGHLIGHT ── */
+.accent-red   { color: var(--color-primary); }
+.accent-gold  { color: var(--color-gold); }
+.bg-accent-red  { background: var(--color-primary); }
+.bg-accent-gold { background: var(--color-gold); }
+
+/* ── 16. INPUT STYLE ── */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  font-family: var(--font-sans);
+}
