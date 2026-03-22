@@ -95,7 +95,7 @@ Vào: dash.cloudflare.com → Pages → legia-2026 → Settings → Environment 
 
 | Tên biến | Giá trị (lấy từ Firebase Console) |
 |---|---|
-| `VITE_FIREBASE_API_KEY` | `AIzaSyCppn-nRQNDthcGiCY_l5Y4AnA6tdIDTMM` |
+| `VITE_FIREBASE_API_KEY` | `AIzaSyCppn-xxxxxxxxxxxx` |
 | `VITE_FIREBASE_AUTH_DOMAIN` | `legia-2026.firebaseapp.com` |
 | `VITE_FIREBASE_PROJECT_ID` | `legia-2026` |
 | `VITE_FIREBASE_STORAGE_BUCKET` | `legia-2026.firebasestorage.app` |
