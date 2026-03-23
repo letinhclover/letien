@@ -46,7 +46,7 @@ export async function uploadToCloudinary(
   const formData = new FormData();
   formData.append('file', blob, 'photo.jpg');
   formData.append('upload_preset', UPLOAD_PRESET);
-  formData.append('folder', 'giaPha');
+  formData.append('folder', 'letien');
 
   const res = await fetch(
     `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`,
