@@ -21,8 +21,8 @@ const DirectoryTab = lazy(() => import('./tabs/DirectoryTab'));
 const EventsTab    = lazy(() => import('./tabs/EventsTab'));
 const SettingsTab  = lazy(() => import('./tabs/SettingsTab'));
 
-const SUPER_ADMIN_EMAILS = ['letinhclover@gmail.com'];
-const EDITOR_EMAILS      = ['quanlylegia2026@gmail.com'];
+const SUPER_ADMIN_EMAILS = ['thanhkim@gmail.com'];
+const EDITOR_EMAILS      = ['quanlyletien2026@gmail.com'];
 const ALL_AUTH_EMAILS    = [...SUPER_ADMIN_EMAILS, ...EDITOR_EMAILS];
 const TAB_ORDER: TabId[] = ['tree', 'directory', 'events', 'settings'];
 
