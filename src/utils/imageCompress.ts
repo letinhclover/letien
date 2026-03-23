@@ -28,8 +28,8 @@ export async function uploadToCloudinary(
   file: File,
   onProgress?: (msg: string) => void
 ): Promise<string> {
-  const CLOUD_NAME = 'dedz5a7xl';
-  const UPLOAD_PRESET = 'giaPha_photos';
+  const CLOUD_NAME = 'dwcggyg9s';
+  const UPLOAD_PRESET = 'letien_caygiapha';
 
   onProgress?.('Đang nén ảnh...');
   let blob: Blob;
