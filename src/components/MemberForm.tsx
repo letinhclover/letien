@@ -257,7 +257,7 @@ export default function MemberForm({
             {editingMember ? '✏️ Sửa thông tin' : '➕ Thêm thành viên'}
           </h3>
           <p style={{ fontSize: 12, color: '#FFD700', opacity: 0.85, fontFamily: "'Roboto', sans-serif" }}>
-            Gia Phả Dòng Họ Lê
+            Gia Phả Dòng Họ Lê Tiến
           </p>
         </div>
         <button
@@ -373,7 +373,7 @@ export default function MemberForm({
                 <input
                   style={inpStyle} value={form.name}
                   onChange={e => set('name', e.target.value)}
-                  placeholder="Lê Văn A" required
+                  placeholder="Lê Tiến A" required
                 />
               </div>
 
